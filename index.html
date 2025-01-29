@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Summarizer</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<style>
+  @keyframes cursor {
+
+    100% {border-color: transparent}
+  }
+  @keyframes typing {
+    from {width: 0}
+    
+  }
+</style>
+<body>
+  
+
+  <u style="color: snow;"><h1 style="color:snow; font-size:30px;text-shadow:0 2px 4px rgba(0, 0, 0, 0);padding: 0%;margin: 0%;border-right: 2px solid;width:100%;white-space: nowrap;overflow: hidden;animation: typing 10s , cursor 2s infinite;">Text Summarizer</h1></u>
+  <p style="color: snow;border-right: 2px solid;width:100%;white-space: nowrap;overflow: hidden;animation: typing 10s , cursor 2s infinite;"> Welcome to the AI based Text Summarizer App! This app leverages the power of Artificial Intelligence APIs to provide concise summaries of long texts. <br><br> Simply paste your text into the text area below and click the "Summarize" button.</p>
+  <div class="container">
+    <div class="text-box">
+      <textarea id="text_to_summarize" name="text_to_summarize" placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)" maxlength="100000" style="background-color:aliceblue; font-family: 'Roboto', sans-serif;font-size:18px;margin-bottom:100px"></textarea>
+      <button id="submit-button" class="submit-button">
+        <span class="submit-button-text">Summarize</span>
+      </button>
+    </div>
+    <div class="text-box"> 
+      <textarea id="summary" name="summarized_text" placeholder="  Summarized text will appear here" style="margin-bottom: 130px; background-color:aliceblue; font-family: 'Roboto', sans-serif;font-size:18px;"> </textarea>
+    </div>
+  </div>
+  <div class="footer">
+    <center>
+      <br>
+
+      <p style="color:white; font-size:20px; padding-top:0px; margin-top:7px;border-right: 2px solid;width:100%;white-space: nowrap;overflow: hidden;animation: typing 10s , cursor 2s infinite;"> created by
+        <a href="https://www.linkedin.com/in/deep-dey-959590270" target="_blank" style="color: white; text-decoration: none;">
+          <img src="images/linkdin.png" height="30px" width="30px" alt="LinkedIn" style="vertical-align: middle;">Deep
+        </a>
+        <a href="https://github.com/deep-dey1" target="_blank" style="color: white; text-decoration: none;">
+          <img src="images/github1.png" height="20px" width="20px" alt="GitHub" style="vertical-align: middle;">TrueDeep
+        </a>
+      </p>
+     
+
+      <audio id="backgroundMusic" loop>
+          <source src="sound.mp3" type="audio/mp3">
+          <!-- Add additional source tags for other audio formats if desired -->
+          Your browser does not support the audio tag.
+      </audio>
+    </center>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="script_1.js"></script>
+  <script>
+    // Generate stars
+
+    for (let i = 0; i < 10; i++) {
+      let star1 = document.createElement("div");
+      star1.className = "stars1";
+      star1.style.left = Math.random() * document.body.clientWidth + "px"; // Use document.body.clientWidth instead of window.innerWidth
+      
+      star1.style.top = Math.random() * window.innerHeight + "px";
+      star1.style.animationDuration = (100) + "s"; // Randomize animation speed
+      star1.style.animationDelay = -(Math.random() * 100) + "s"; // Randomize initial animation phase
+      document.body.appendChild(star1);
+    }
+
+    for (let i = 0; i <15; i++) {
+      let star2 = document.createElement("div");
+      star2.className = "stars2";
+      star2.style.left = Math.random() * document.body.clientWidth + "px"; // Use document.body.clientWidth instead of window.innerWidth
+      
+      star2.style.top = Math.random() * window.innerHeight + "px";
+      star2.style.animationDuration = (80 ) + "s"; // Randomize animation speed
+      star2.style.animationDelay = -(Math.random() * 120) + "s"; // Randomize initial animation phase
+      document.body.appendChild(star2);
+    }
+
+    
+    for (let i = 0; i < 50; i++) {
+      let star = document.createElement("div");
+      star.className = "stars";
+      star.style.left = Math.random() * document.body.clientWidth + "px";
+      star.style.top = Math.random() * window.innerHeight + "px";
+      star.style.animationDuration = (1 * 5) + "s"; // Randomize animation speed
+      star.style.animationDelay = -(Math.random() * 100) + "s"; // Randomize initial animation phase
+      document.body.appendChild(star);
+    }
+  </script>
+</body>
+</html>
