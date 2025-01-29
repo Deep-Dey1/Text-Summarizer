@@ -1,5 +1,5 @@
 # Text-Summarizer
 Text-Summarizer 
-Currently this repository only contains the readme file.
-the main content of this project is inside one of my reples and 
-I will soon upload the contents of that repel here.
+I have used Replit as my workspace for the creation of the whole project.
+Postman for the api management 
+Hugginface for the api of FaceBook's bert Large CNN model.
